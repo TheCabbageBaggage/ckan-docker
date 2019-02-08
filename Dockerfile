@@ -1,6 +1,7 @@
 FROM ckan/ckan
-
 MAINTAINER Linus Kohl
+
+USER root
 
 RUN apt-get -q -y update \
     && apt-get -q -y install \
