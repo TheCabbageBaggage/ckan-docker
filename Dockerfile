@@ -22,4 +22,5 @@ RUN /bin/bash -c "source $CKAN_VENV/bin/activate && cd $CKAN_VENV/src && \
     pip install -r ckanext-package-converter/requirements.txt && \
     pip install -e git+https://github.com/ckan/ckanext-scheming.git#egg=ckanext-scheming && \
     pip install -r ckanext-scheming/requirements.txt && \
-    pip install ckanext-pdfview"
+    pip install ckanext-pdfview && \
+    pip install flask-debugtoolbar"
