@@ -1,6 +1,7 @@
 # Readme for ckan-docker
 ```
-git clone https://github.com/TheCabbageBaggage/ckan-docker
+git clone git@github.com:TheCabbageBaggage/ckan-docker.git
+
 
 ```
 
