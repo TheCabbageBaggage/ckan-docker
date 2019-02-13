@@ -64,6 +64,8 @@ services:
     volumes:
       - ./solr_config:/myconfig
       - solr_data:/opt/solr/server/solr/ckan
+    ports:
+     - "8983:8983"
     entrypoint:
       - docker-entrypoint.sh
       - solr-precreate
