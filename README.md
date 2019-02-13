@@ -45,10 +45,21 @@ echo $VOL_CKAN_STORAGE
 * adding a superuser during the initialisation -> userdata in external file
 
 ## Problems
+#### Postgis
+
 ```postgis``` is complaining that a role ```postgres``` is not existing, even if no user is using this role. Despite that CKAN works fine.
 ```
 UTC [58] FATAL:  role "postgres" does not exist
 ```
+#### Creating a Public Dataset with a DOI
+When creating a public dataset with an DOI this will lead to an ```internal server error```. The ckan doi extension runs into the follwing error.
+```
+file "/usr/lib/ckan/venv/src/ckanext-doi/ckanext/doi/lib.py", line 160, in build_metadata
+ckan          |     if pkg_dict['license_id'] != 'notspecified':
+ckan          | KeyError: 'license_id'
 
+```
 
 This documentation is based on [Installing CKAN with Docker Compose](https://docs.ckan.org/en/2.8/maintaining/installing/install-from-docker-compose.html)
+
+
