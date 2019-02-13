@@ -45,7 +45,7 @@ echo $VOL_CKAN_STORAGE
 * adding a superuser during the initialisation -> userdata in external file
 
 ## Problems
-```postgis``` si complaining that a role ```postgres``` is not existing, even if no user is using this role. Despite that CKAN works fine.
+```postgis``` is complaining that a role ```postgres``` is not existing, even if no user is using this role. Despite that CKAN works fine.
 ```
 UTC [58] FATAL:  role "postgres" does not exist
 ```
