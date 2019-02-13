@@ -29,7 +29,7 @@ The volume names slightly differ from the original ones.
 docker volume inspect ckandocker_ckan_home | jq -c '.[] | .Mountpoint'
 # "/var/lib/docker/volumes/docker_ckan_config/_data"
 
-export VOL_CKAN_HOME=`docker volume inspect docker_ckan_home | jq -r -c '.[] | .Mountpoint'`
+export VOL_CKAN_HOME=`docker volume inspect ckandocker_ckan_home | jq -r -c '.[] | .Mountpoint'`
 echo $VOL_CKAN_HOME
 
 export VOL_CKAN_CONFIG=`docker volume inspect ckandocker_ckan_home | jq -r -c '.[] | .Mountpoint'`
